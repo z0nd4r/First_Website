@@ -15,7 +15,7 @@ class Converter:
         if self.request_type == "Длина":
             lst_length = ['cm', 'km', 'm', 'mm', 'mi', 'yd', 'ft', 'in']
             lst_length.remove(self.target)
-            initial_value = self.data_int_float * ureg[self.target]  # Умножаем на верную единицу
+            initial_value = self.data_int_float * ureg[self.target]  
             lst = []
             for lh in lst_length:
                 converted_value = initial_value.to(lh)
@@ -25,7 +25,7 @@ class Converter:
         elif self.request_type == "Масса":
             lst_weigth = ['kg', 'g', 'mg', 't', 'lb', 'oz']
             lst_weigth.remove(self.target)
-            initial_value = self.data_int_float * ureg[self.target]  # Умножаем на верную единицу
+            initial_value = self.data_int_float * ureg[self.target]  
             lst = []
             for wh in lst_weigth:
                 converted_value = initial_value.to(wh)
